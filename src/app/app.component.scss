@@ -1,0 +1,126 @@
+
+$priamry-color: #2B8EAD;
+.signature{
+    text-align: center;
+}
+.primary{
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px 15px;    
+    font-size: 18px;
+    font-weight: 1;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid $priamry-color;
+    border-radius: 10px;
+    background-color: $priamry-color;
+    margin: 10px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+@media (min-width: 375px) and (max-width:960px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        gap: 0px;
+
+        .col-8 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            gap: 0px;
+            flex-wrap: wrap;
+            text-align: center;
+    
+            $colors: #2B8EAD,
+            #6F98A8,
+            #BFBFBF,
+            #2F454E,
+            #2B8EAD,
+            #6F98A8,
+            #2F454E,
+            #BFBFBF,
+            #2F454E;
+    
+            @for $i from 1 through length($colors) {
+                $c: nth($colors, $i);
+    
+                .col-#{$i} {
+                    display: flex;
+                    width: 97%;
+                    height: 60px;
+                    color: #000;
+                    font-size: 18px;
+                    background-color: #EFEFEF;
+                    border-left: 10px solid;
+                    border-left-color: $c;
+                    margin-bottom: 10px;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+        .col-4{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 960px ) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0px;
+        flex-wrap: wrap;
+    
+        .col-8 {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 0px;
+            flex-wrap: wrap;
+    
+            $colors: #2B8EAD,
+            #6F98A8,
+            #BFBFBF,
+            #2F454E,
+            #2B8EAD,
+            #6F98A8,
+            #2F454E,
+            #BFBFBF,
+            #2F454E;
+    
+            @for $i from 1 through length($colors) {
+                $c: nth($colors, $i);
+    
+                .col-#{$i} {
+    
+                    width: 33.33%;
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 84px;
+                    color: #fff;
+                    background-color: $c
+                }
+            }
+        }
+        .col-4{
+            width: 20%;
+            text-align: center;
+        }
+    }
+}
